@@ -1,0 +1,169 @@
+/* ======================================= COMBINATORS ======================================= */
+
+/*
+combinators = describe relationship between selectors
+
+(space) = descendant
+>       = child
++       = adjacent sibling
+~       = general sibling
+*/
+
+.combinator-container {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* DESCENDANT */
+/* selects ALL <p> inside container (any depth) */
+/*
+.combinator-container p {
+    background-color: hsl(60, 100%, 80%);
+}
+*/
+
+/* CHILD */
+/* selects ONLY direct <p> children of container */
+/*
+.combinator-container > p {
+    background-color: hsl(120, 100%, 80%);
+}
+*/
+
+/* ADJACENT SIBLING */
+/* selects FIRST <p> immediately after container */
+/*
+.combinator-container + p {
+    background-color: hsl(200, 100%, 80%);
+}
+*/
+
+/* GENERAL SIBLING */
+/* selects ALL <p> after container (same level) */
+/*
+.combinator-container ~ p {
+    background-color: hsl(300, 100%, 80%);
+}
+*/
+
+/* ======================================= PSEUDO-CLASSES ======================================= */
+
+/* pseudo-classes = style elements based on state or position */
+
+/* ---------- LINK STATES ---------- */
+/*
+:link    = unvisited link
+:visited = visited link
+:hover   = mouse over element
+:active  = element being clicked
+*/
+
+a:link {
+    color: hsl(221, 100%, 74%);
+}
+
+a:visited {
+    color: hsl(0, 0%, 75%);
+}
+
+a:hover {
+    color: hsl(221, 100%, 86%);
+    font-size: 1.1em;
+}
+
+a:active {
+    color: hsl(240, 100%, 58%);
+    font-size: 1.1em;
+}
+
+/* ---------- LIST ITEM STATES ---------- */
+
+/* :hover = applies when mouse is over item */
+.list-demo li:hover {
+    background-color: hsl(60, 100%, 72%);
+}
+
+/* :not(:hover) = applies to all items NOT hovered */
+.list-demo li:not(:hover) {
+    background-color: hsl(0, 0%, 76%);
+}
+
+/* :nth-child(3n + 2) */
+/* selects 2nd item in every group of 3 */
+.list-demo li:nth-child(3n + 2) {
+    background-color: hsl(60, 100%, 78%);
+}
+
+/* ---------- HOVER TO SHOW CONTENT ---------- */
+
+/* hidden by default */
+.greeting p {
+    background-color: hsl(196, 100%, 81%);
+    padding: 10px;
+    display: none;
+}
+
+/* shown when parent is hovered */
+.greeting:hover p {
+    display: block;
+}
+
+/* ======================================= PSEUDO-ELEMENTS ======================================= */
+
+/*
+pseudo-elements = style specific PARTS of an element
+
+::first-letter = first letter of text
+::first-line   = first line of text
+::selection    = selected text
+::before       = content before element
+::after        = content after element
+::marker       = list item marker (bullet)
+*/
+
+/* ---------- TEXT PARTS ---------- */
+
+/* styles only the FIRST LETTER */
+.pe-title::first-letter {
+    font-size:  2em;
+    font-style: italic;
+}
+
+/* styles only the FIRST LINE of a paragraph */
+.pe-text::first-line {
+    background-color: hsl(60, 100%, 77%);
+}
+
+/* styles text when user SELECTS it */
+.pe-text::selection {
+    color: rgb(89, 255, 71);
+    background-color: hsl(0, 0%, 21%);
+}
+
+/* ---------- GENERATED CONTENT ---------- */
+
+/* ::before = inserts content BEFORE element */
+.fruit::before {
+    content: "I like ";
+}
+
+/* ::after = inserts content AFTER element */
+.apple::after {
+    content: " 🍎";
+}
+.orange::after {
+    content: " 🍊";
+}
+
+.banana::after {
+    content: " 🍌";
+}
+
+/* ---------- LIST MARKERS ---------- */
+
+/* ::marker = styles list bullets */
+.pe-fruit-list li::marker {
+    content: "✔ ";
+    color: hsl(120, 100%, 64%);
+    font-size: 1.2em;
+}

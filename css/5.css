@@ -1,0 +1,179 @@
+/* ================= GLOBAL ================= */
+
+/* remove default browser spacing */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 96%);
+}
+
+main {
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* ======================================= NAVBAR ======================================= */
+
+/*
+.navbar uses float-based layout (legacy but still important to know)
+overflow: hidden is REQUIRED because:
+- floated children are removed from normal flow
+- without overflow, parent height collapses
+*/
+
+.navbar ul {
+    list-style: none;
+    background-color: hsl(0, 0%, 25%);
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* clears floats */
+}
+
+/* each list item floats left to form horizontal menu */
+.navbar li {
+    float: left;
+    position: relative; /* reference for absolute dropdown */
+}
+
+/* link styling */
+.navbar a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* hover feedback */
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+/* ---------- NAVBAR DROPDOWN ---------- */
+
+/*
+position: absolute is used so dropdown:
+- does NOT push other content
+- appears on top of layout
+- is positioned relative to parent (li)
+*/
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: hsl(0, 0%, 20%);
+    min-width: 140px;
+}
+
+/* show dropdown on hover */
+.navbar li:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown-content a {
+    padding: 12px;
+}
+
+/* ======================================= DROPDOWN (BUTTON BASED) ======================================= */
+
+/*
+inline-block keeps dropdown sized to content
+and allows positioning of absolute children
+*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* dropdown button */
+.dropdown button {
+    background-color: hsl(0, 0%, 70%);
+    color: black;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* dropdown content hidden by default */
+.dropdown .content {
+    display: none;
+    position: absolute;
+
+    background-color: hsl(0, 0%, 95%);
+    min-width: 140px;
+
+    /* shadow separates dropdown from background */
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.4);
+}
+
+/* links inside dropdown */
+.dropdown .content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* hover effects */
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown:hover button {
+    background-color: hsl(0, 0%, 60%);
+}
+
+.dropdown .content a:hover {
+    background-color: hsl(0, 0%, 90%);
+}
+
+/* ======================================= PAGINATION ======================================= */
+
+/*
+pagination uses inline-block links
+so width/padding apply
+while staying on same line
+*/
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 4px;
+
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+/* active page */
+.pagination a.active {
+    background-color: hsl(120, 100%, 70%);
+    font-weight: bold;
+}
+
+/* hover except active */
+/*
+:not(.active) prevents hover
+from overriding active state
+*/
+
+.pagination a:hover:not(.active) {
+    background-color: hsl(0, 0%, 80%);
+}
