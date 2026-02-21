@@ -1,0 +1,93 @@
+/* ================= GLOBAL RESET ================= */
+
+/*
+box-sizing: border-box
+- padding and border included in width/height
+- prevents layout breaking
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 96%);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background-color: hsl(0, 0%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: hsl(0, 0%, 15%);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+/*
+This layout uses FLOATS (old but important)
+- aside, section, article float next to each other
+- widths must add up to 100%
+*/
+
+aside {
+    width: 20%;
+    float: left;
+    padding: 15px;
+    background-color: hsl(0, 0%, 92%);
+}
+
+section {
+    width: 40%;
+    float: left;
+    padding: 15px;
+}
+
+article {
+    width: 40%;
+    float: left;
+    padding: 15px;
+}
+
+/* ================= FOOTER ================= */
+
+/*
+clear: both
+- stops footer from wrapping around floats
+- REQUIRED when using float layouts
+*/
+
+footer {
+    clear: both;
+    background-color: hsl(0, 0%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/*
+media query triggers when screen width <= 600px
+- layout becomes vertical
+- common mobile-first behavior
+*/
+
+@media screen and (max-width: 600px) {
+
+    aside,
+    section,
+    article {
+        width: 100%;
+    }
+}

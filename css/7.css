@@ -1,0 +1,194 @@
+/* ================= FLEXBOX ================= */
+
+/*
+display: flex
+- turns an element into a flex container
+- direct children become flex items
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 96%);
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: hsl(210, 40%, 90%);
+}
+
+section {
+    margin: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* ---------- BASE FLEX CONTAINER ---------- */
+
+.flex-container {
+    display: flex;
+    background-color: hsl(0, 0%, 85%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ---------- FLEX ITEMS ---------- */
+
+.box {
+    background-color: hsl(120, 100%, 75%);
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* taller item for align-items demo */
+.tall {
+    height: 100px;
+}
+
+/* ================= FLEX-DIRECTION ================= */
+
+/*
+flex-direction = direction of main axis
+
+row            = left → right (default)
+row-reverse    = right → left
+column         = top → bottom
+column-reverse = bottom → top
+*/
+
+.direction-demo {
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ================= JUSTIFY-CONTENT ================= */
+
+/*
+justify-content = alignment on MAIN axis (X-axis in row)
+
+flex-start    = start (default)
+flex-end      = end
+center        = center
+space-between = space only between items
+space-around  = space around items
+space-evenly  = equal space everywhere
+*/
+
+.justify-demo {
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+/* ================= ALIGN-ITEMS ================= */
+
+/*
+align-items = alignment on CROSS axis (Y-axis in row)
+
+flex-start = top
+flex-end   = bottom
+center     = center
+baseline   = aligns text baselines
+stretch    = default (stretches height)
+*/
+
+.align-items-demo {
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+}
+
+/* ================= FLEX-WRAP & ALIGN-CONTENT ================= */
+
+/*
+flex-wrap = wrapping behavior
+
+nowrap        = no wrap (default)
+wrap          = move items to next line
+wrap-reverse  = reverse wrapping
+*/
+
+.wrap-demo {
+    flex-wrap: wrap;
+    align-content: space-evenly;
+
+    /*
+    align-content works ONLY when:
+    - items wrap
+    - there is extra vertical space
+    */
+
+    gap: 10px;
+    height: 250px;
+}
+
+/* ================= GAP ================= */
+
+/*
+gap / row-gap / column-gap
+- space between flex items
+- replaces margin hacks
+*/
+
+/* already used via gap above */
+
+/* ================= ALIGN-SELF ================= */
+
+/*
+align-self = overrides align-items for ONE item
+
+flex-start
+flex-end
+center
+stretch
+*/
+
+.self-center {
+    align-self: center;
+    background-color: hsl(200, 100%, 75%);
+}
+
+/* ================= ORDER ================= */
+
+/*
+order = visual order of items
+default = 0
+lower value appears first
+*/
+
+.order-first {
+    order: -1;
+    background-color: hsl(0, 100%, 75%);
+}
+
+/* ================= IMPORTANT FLEX PROPERTIES YOU MISSED ================= */
+
+/*
+flex-grow   = how much item grows relative to others
+flex-shrink = how much item shrinks
+flex-basis  = initial size before grow/shrink
+*/
+
+.box {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+/*
+flex shorthand (VERY IMPORTANT):
+
+flex: grow shrink basis
+example:
+flex: 1 1 200px;
+*/
+
+/*
+flex-flow shorthand:
+flex-flow: row wrap;
+combines direction + wrap
+*/

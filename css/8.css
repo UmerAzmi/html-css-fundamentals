@@ -1,0 +1,137 @@
+/* ================= TRANSFORM ================= */
+
+/*
+transform = visually changes an element
+- does NOT affect document flow
+- element keeps original space
+*/
+
+/* ---------- GLOBAL STYLES ---------- */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 96%);
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+    background-color: hsl(210, 40%, 90%);
+}
+
+section {
+    margin: 60px;
+}
+
+/* ---------- IMAGE TRANSFORM ---------- */
+
+img {
+    width: 200px;
+    margin-top: 20px;
+
+    /*
+    transform functions are applied LEFT → RIGHT
+    order MATTERS
+    */
+
+    transform: 
+        translateX(200px)     /* move right */
+        scaleX(1.5)           /* stretch horizontally */
+        rotate(180deg);       /* rotate around Z-axis */
+}
+
+/* ---------- BOX TRANSFORM ---------- */
+
+.box {
+    border: 5px solid black;
+    width: 250px;
+    height: 250px;
+
+    font-size: 13em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 250px;
+
+    background-color: hsl(120, 100%, 80%);
+    margin: auto;
+
+    /*
+    translate(x, y) = move element
+    rotate(deg)     = rotate element
+    */
+
+    transform: translate(50px, 50px) rotate(45deg);
+}
+
+/* ================= TRANSFORM FUNCTIONS ================= */
+
+/*
+TRANSLATE
+--------------------------------
+translateX(50px)
+translateY(50px)
+translate(50px, 50px)
+- moves element
+- positive = right / down
+- negative = left / up
+*/
+
+/*
+ROTATE
+--------------------------------
+rotate(45deg)   = 2D rotation
+rotateX(180deg) = 3D flip (needs perspective)
+rotateY(180deg)
+rotateZ(180deg)
+*/
+
+/*
+SCALE
+--------------------------------
+scaleX(2)       = stretch width
+scaleY(2)       = stretch height
+scale(2, 0.5)   = width, height
+scale(1.5)      = uniform scaling
+*/
+
+/*
+SKEW
+--------------------------------
+skewX(20deg)
+skewY(20deg)
+skew(20deg, 20deg)
+- slants element
+*/
+
+/* ================= IMPORTANT EXTRAS ================= */
+
+/*
+transform-origin
+--------------------------------
+controls pivot point of transform
+
+default: center center
+*/
+
+.box {
+    transform-origin: center;
+}
+
+/*
+3D transforms NOTE
+--------------------------------
+rotateX / rotateY need perspective to look 3D
+example:
+
+.parent {
+    perspective: 800px;
+}
+*/
+
+/*
+TIP:
+--------------------------------
+Transforms are often animated using transition
+(you’ll learn this next)
+*/
