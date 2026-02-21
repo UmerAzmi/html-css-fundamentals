@@ -1,0 +1,178 @@
+body {
+    margin: 20px;
+    padding-bottom: 40px;
+}
+/* ======================================= MARGIN ======================================= */
+
+/* .margin-box = demo element for margin */
+.margin-box {
+    border: 5px solid;        /* visible border to see spacing */
+    font-size: 3em;           /* large text for clarity */
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;       /* vertically center text */
+
+    /* margin = space OUTSIDE the element */
+
+    /* individual sides */
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+
+    /* shorthand equivalent - margin: 50px; */
+}
+
+/* first box color */
+.margin-box-red {
+    background-color: hsl(0, 100%, 60%);
+}
+
+/* second box color */
+.margin-box-blue {
+    background-color: hsl(189, 100%, 55%);
+}
+
+/* important margin rules */
+/*
+margin: 10px;            -> all sides
+margin: 10px 20px;       -> top/bottom | left/right
+margin: 10px 20px 30px;  -> top | left/right | bottom
+margin: 10px 20px 30px 40px; -> top | right | bottom | left
+/* 20px = top & bottom margin 
+/* auto = left & right margin (centers element)
+margin: 20px auto
+
+/* margin-left: auto = pushes element to the right */
+/* margin-right: auto = pushes element to the left */ 
+
+/* ======================================= FLOAT ======================================= */
+
+/* float = allows text and inline content to flow around an element */
+/* mostly used for images (legacy layout technique) */
+
+/* container uses flow-root to contain floated children */
+.float-demo {
+    border: 3px solid black;
+
+    /* flow-root = creates a new block formatting context */
+    /* prevents parent from collapsing due to floated children */
+    display: flow-root;
+}
+
+/* float image to the left */
+.float-img-left {
+    float: left;              /* image moves to the left */
+    margin-right: 10px;       /* space between image and text */
+    padding: 10px;
+}
+
+/* float image to the right */
+.float-img-right {
+    float: right;             /* image moves to the right */
+    margin-left: 10px;        /* space between image and text */
+    padding: 10px;
+}
+
+/* important float values */
+/*
+float: left   -> element moves to left, content wraps on right
+float: right  -> element moves to right, content wraps on left
+float: none   -> default (no floating)
+*/
+
+/* clear (you should know this) */
+/*
+clear: left   -> no floating elements on left side
+clear: right  -> no floating elements on right side
+clear: both   -> no floating elements on either side
+*/
+
+/* ======================================= OVERFLOW ======================================= */
+
+/* overflow = controls what happens when content exceeds element size */
+
+.overflow-box {
+    border: 2px solid black;   /* visible boundary */
+    height: 75px;              /* small height to force overflow */
+
+    /* overflow values (use ONE at a time to test) */
+
+    /* visible = content spills outside the box (default) */
+    /* hidden  = extra content is cut off */
+    /* clip    = like hidden but no scrolling allowed */
+    /* scroll  = scrollbars always visible */
+    /* auto    = scrollbars only when needed (most common) */
+
+    overflow: auto;
+}
+
+/* overflow-x = horizontal overflow only */
+/* overflow-y = vertical overflow only */
+
+
+/* ======================================= DISPLAY ======================================= */
+
+/* block */
+/* starts on new line */
+/* takes full width */
+/* width & height work */
+.display-block {
+    background-color: hsl(0, 100%, 75%);
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+/* inline */
+/* stays in text flow */
+/* width & height are ignored */
+.display-inline {
+    background-color: hsl(204, 100%, 75%);
+    width: 100px;   /* ignored */
+    height: 100px;  /* ignored */
+    display: inline;
+}
+
+/* inline-block */
+/* stays inline */
+/* width & height DO work */
+.display-inline-block {
+    background-color: hsl(120, 100%, 75%);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+/* none */
+/* element is removed from layout completely */
+.display-none {
+    background-color: hsl(0, 0%, 70%);
+    display: none;
+}
+
+/* visibility hidden */
+/* element is invisible */
+/* space is still reserved */
+.visibility-hidden {
+    background-color: hsl(50, 100%, 75%);
+    width: 100px;
+    height: 100px;
+    visibility: hidden;
+}
+
+/* flex */
+/* enables flexible layout (children become flex items) */
+.display-flex {
+    display: flex;
+    gap: 10px;
+}
+
+/* grid */
+/* enables grid layout (rows + columns) */
+.display-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 10px;
+}
