@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="../Images/form.png" type="image/png">
+    <title>HTML Forms</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML Forms</h1>
+    </header>
+
+    <!-- ================= FORM ================= -->
+
+    <!-- form = collects user input -->
+    <!-- action = where data is sent (backend file) -->
+    <!-- method = how data is sent -->
+    <!-- POST = secure, not visible in URL -->
+    <form action="index.php" method="POST">
+
+        <!-- ================= TEXT INPUT ================= -->
+
+        <!-- label connects text to input -->
+        <!-- for must match input id -->
+        <label for="username">Username:</label>
+
+        <!-- type="text" = normal text input -->
+        <!-- placeholder = hint text -->
+        <!-- minlength / maxlength = length rules -->
+        <!-- required = must be filled -->
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="JohnDoe"
+            minlength="4"
+            maxlength="15"
+            required>
+        <br><br>
+
+        <!-- name = key used when form data is sent -->
+        <!-- Without name, input data is NOT submitted -->
+
+        <!-- title = tooltip message -->
+        <!-- Shows when user hovers or validation fails -->
+
+        <!-- ================= PASSWORD INPUT ================= -->
+
+        <label for="password">Password:</label>
+
+        <!-- type="password" = hides characters -->
+        <!-- pattern = regex rule -->
+        <!-- This pattern enforces: -->
+        <!-- at least 1 uppercase -->
+        <!-- at least 1 lowercase -->
+        <!-- at least 1 number -->
+        <!-- at least 1 symbol -->
+        <!-- minimum 8 characters -->
+        <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8,}"
+            title="Must contain uppercase, lowercase, number, symbol, and be 8+ characters">
+        <br><br>
+
+        <!-- ================= EMAIL INPUT ================= -->
+
+        <label for="email">Email:</label>
+
+        <!-- type="email" = built-in email validation -->
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="johndoe@gmail.com"
+            required>
+        <br><br>
+
+        <!-- ================= NUMBER INPUT ================= -->
+
+        <label for="age">Age:</label>
+
+        <!-- type="number" = numbers only -->
+        <!-- min / max = allowed range -->
+        <input
+            type="number"
+            id="age"
+            name="age"
+            min="1"
+            max="120">
+        <br><br>
+
+        <!-- ================= SELECT (DROPDOWN) ================= -->
+
+        <label for="payment">Payment method:</label>
+
+        <!-- select = dropdown -->
+        <select id="payment" name="payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="upi">UPI</option>
+        </select>
+        <br><br>
+
+        <!-- ================= TEXTAREA ================= -->
+
+        <label for="comment">Comment:</label>
+
+        <!-- textarea = multi-line input -->
+        <textarea
+            id="comment"
+            name="comment"
+            rows="4"
+            cols="30"
+            placeholder="Write something...">
+        </textarea>
+        <br><br>
+
+        <!-- ================= FILE INPUT ================= -->
+
+        <label for="file">Upload image:</label>
+
+        <!-- type="file" = file upload -->
+        <!-- accept = allowed file types -->
+        <input
+            type="file"
+            id="file"
+            name="file"
+            accept="image/png, image/jpeg">
+        <br><br>
+
+        <!-- ================= RADIO BUTTONS ================= -->
+
+        <!-- radio buttons share SAME name -->
+        <!-- only one can be selected -->
+        <p>Account type:</p>
+
+        <input type="radio" id="basic" name="account" value="basic" required>
+        <label for="basic">Basic</label>
+
+        <input type="radio" id="esentials" name="account" value="esentials">
+        <label for="esentials">Esentials</label>
+
+        <input type="radio" id="premium" name="account" value="premium">
+        <label for="premium">Premium</label>
+        <br><br>
+
+        <!-- ================= CHECKBOX ================= -->
+
+        <!-- checkbox = yes / no -->
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms</label>
+        <br><br>
+
+        <!-- ================= FORM BUTTONS ================= -->
+
+        <!-- reset = clears form -->
+        <input type="reset"> <br>
+
+        <!-- submit = sends form data -->
+        <input type="submit">
+
+    </form>
+
+</body>
+</html>

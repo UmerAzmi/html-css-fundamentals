@@ -1,0 +1,97 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: Inter, system-ui, sans-serif;
+    background-color: #1e1d1de7;
+    color: #e5e7eb; /* light gray */
+    line-height: 1.6;
+    padding: 40px 40px 0px;
+}
+
+header {
+    display: block;
+    background-color: #cf888878;
+    padding: 25px;
+    margin: -40px -40px 0 -40px;
+    border-top: 2px solid #92979f;
+    border-bottom: 2px solid #92979f;
+    text-align: center;
+}
+
+/* ================= FORMS ================= */
+form {
+    /* width: fit-content; */
+    margin: 0;
+    text-align: left;
+    font-size: 1.5em;
+    background-color: #000000df; /* dark slate */
+    border: 1.7px solid #92979f;
+    border-top: none;
+    padding: 50px 30px;
+}
+
+label {
+    display: inline-block;
+    width: 240px;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #94a3b8;
+}
+
+select,{
+    padding: 8px 12px;
+}
+
+textarea {
+    padding: 1px 1px;
+    display: inline-block;
+    vertical-align: top; /* aligns nicely with label text */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 4px;
+}
+
+label[for="basic"],
+label[for="premium"],
+label[for="esentials"]{
+    width: 100px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin-top: 10px;
+    padding: 8px 14px;
+    width: 14em;
+    cursor: pointer;
+    background-color: rgb(153, 127, 219);
+    color: #0c0c0c;
+    margin-bottom: 1px;
+}
+
+input[type="submit"] {
+    background-color:  rgb(203, 137, 198);
+    margin-top: 5px;
+}
+
+label[for="terms"],
+label[for="basic"],
+label[for="premium"],
+label[for="esentials"] {
+    font-size: 0.7em;
+}

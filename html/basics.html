@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- charset = supports almost all characters -->
+    <meta charset="UTF-8">
+
+    <!-- viewport = makes site responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title shown in browser tab -->
+    <title>HTML Lesson</title>
+
+    <!-- favicon = small icon in browser tab -->
+    <!-- rel="icon" tells browser this is a favicon -->
+    <!-- type = image format -->
+    <!-- href = path to icon -->
+    <link rel="icon" type="image/jpg" href="../images/html.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ================= SEMANTIC LAYOUT HEADER ================= -->
+    <!-- header = top section of the page -->
+    <!-- usually contains logo, title, navigation -->
+    <header id="header" class="page-header">
+        <hr>
+        <h1>Welcome to HTML Lesson</h1>
+        
+        <!-- Navigation links -->
+        <nav>
+            <a href="#header">Home</a>
+            <a href="./form.html" target="_blank">Form</a>
+            <a href="#link">Links</a>
+            <a href="#footer">About Us</a>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- ================= SEMANTIC LAYOUT MAIN ================= -->
+    <!-- main = main content of the page -->
+    <!-- should contain unique page content -->
+    <main>
+        <!-- ================= BASIC TEXT TAGS ================= -->
+
+        <!-- h1 = biggest heading -->
+        <h1 class="first">This is h1</h1>
+
+        <!-- p = paragraph -->
+        <!-- id = unique identifier (can also be used to jump to a section)-->
+        <p id="p1">This is the P Tag with ID</p>
+
+        <!-- class = reusable identifier -->
+        <p class="p2">This is the P Tag with Class</p>
+
+        <!-- p tag ignores extra spaces and new lines -->
+        <p>
+            This is the P Tag
+            with extra spaces and new lines
+            but HTML ignores them.
+        </p>
+
+        <!-- pre = preformatted text -->
+        <!-- preserves spaces, tabs and new lines -->
+        <pre>
+This is the Pre Tag
+It keeps spaces,
+new lines,
+and formatting.
+</pre>
+        <hr>
+
+        <!-- ================= TEXT FORMATTING ================= -->
+
+        <!-- Normal paragraph text -->
+        <p>This is normal text</p>
+
+        <!-- b = bold text (visual only, no extra meaning) -->
+        <p>This is <b>bold</b> text</p>
+
+        <!-- i = italic text (visual only) -->
+        <p>This is <i>italic</i> text</p>
+
+        <!-- u = underlined text -->
+        <p>This is <u>underlined</u> text</p>
+
+        <!-- del = deleted / crossed-out text -->
+        <p>This is <del>deleted</del> text</p>
+
+        <!-- big = makes text bigger -->
+        <!-- Deprecated: avoid using in real projects -->
+        <p>This is <big>big</big> text</p>
+
+        <!-- small = makes text smaller -->
+        <p>This is <small>small</small> text</p>
+
+        <!-- sub = subscript (used in chemistry, math) -->
+        <p>This is <sub>subscript</sub> text</p>
+
+        <!-- sup = superscript (used for powers, math) -->
+        <p>This is <sup>superscript</sup> text</p>
+
+        <!-- tt = monospaced text -->
+        <!-- Deprecated: use CSS font-family instead -->
+        <p>This is <tt>monospaced</tt> text</p>
+
+        <!-- mark = highlighted text -->
+        <p>This is <mark>marked</mark> text</p>
+
+        <hr>
+        <!-- ================= SPAN vs DIV ================= -->
+
+        <!-- span = inline container -->
+        <!-- Does NOT start on a new line -->
+        <!-- Used to style or group small parts of text -->
+        <p>
+            This is a sentence with a
+            <span class="span-box">span inside it</span>
+            and the text continues on the same line.
+        </p>
+
+        <!-- div = block container -->
+        <!-- ALWAYS starts on a new line -->
+        <!-- Used to group larger sections of content -->
+        <p>
+            This is a sentence with a div below it:
+            <div class="div-box">
+            This is a div. It starts on a new line and takes full width.
+            </div>
+        </p>
+        <hr>
+
+        <!-- ================= LISTS ================= -->
+        <div class="lists">
+        <!-- ul = unordered list (bullets) -->
+        <!-- li = list item -->
+        <h4>Groceries</h4>
+        <ul>
+            <li>Milk</li>
+            <li>Eggs</li>
+            <li>Bread</li>
+
+            <!-- Nested list = list inside a list item -->
+            <li>
+                Coffee supplies
+                <ul>
+                    <li>Coffee beans</li>
+                    <li>Sugar</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- ol = ordered list (numbers) -->
+        <h4>To do</h4>
+        <ol>
+            <li>Eat</li>
+            <li>Study</li>
+            <li>Sleep</li>
+        </ol>
+
+        <!-- dl = description list -->
+        <!-- dt = term, dd = description -->
+        <h4>Mythical creature</h4>
+        <dl>
+            <dt>Dragon</dt>
+            <dd>A mythical fire-breathing creature.</dd>
+        </dl>
+        </div>
+        <hr>
+
+        <!-- ================= TABLE ================= -->
+
+        <!-- table = creates a table -->
+        <!-- tr = table row -->
+        <!-- th = table heading (bold + centered by default) -->
+        <!-- td = table data cell -->
+
+        <h3 class="storeHours">Store Hours</h3>
+
+        <table class="store-hours">
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+
+            <tr>
+                <td>Closed</td>
+                <td>9–5</td>
+                <td>9–5</td>
+                <td>9–5</td>
+                <td>9–5</td>
+                <td>9–5</td>
+                <td>10–2</td>
+            </tr>   
+        </table>
+
+
+        <!-- ================= SEPARATOR ================= -->
+
+        <!-- hr = horizontal rule (section separator) -->
+        <hr id="link">
+
+        <!-- ================= BUTTON ================= -->
+
+        <!-- button = clickable element -->
+        <!-- type="button" prevents form submission -->
+        <a href="./form.html" title="Goes to form page" target="_blank">
+            <button type="button">Click Me</button>
+        </a>
+        <!-- ================= BUTTON + SCRIPT ================= -->
+
+        <!-- onclick = runs a JavaScript function when button is clicked -->
+        <button class="js-btn" onclick="doSomething()">
+            Click Me to Change Text
+        </button>
+
+        <!-- id = used to uniquely identify an element -->
+        <p id="greeting">Hello</p>
+
+        <!-- script = used to write JavaScript inside HTML -->
+        <script>
+            // <!-- function = reusable block of JavaScript code -->
+            function doSomething() {
+
+                // <!-- document = the entire web page -->
+                // <!-- getElementById = finds an element using its id -->
+                const greeting = document.getElementById("greeting");
+
+                // <!-- innerHTML = Checks content inside the element -->
+                // <!-- === = checks if two values are exactly equal -->
+                // <!-- ? : = ternary operator (short if-else) -->
+                // <!-- If text is "Hello", change it to "Goodbye" -->
+                // <!-- Else, change it back to "Hello" -->
+                greeting.innerHTML === "Hello"
+                    ? greeting.innerHTML = "Goodbye"
+                    : greeting.innerHTML = "Hello";
+            }
+        </script>
+
+        <!-- ================= LINKS (ANCHOR TAG) ================= -->
+
+        <!-- a = anchor tag (used to create links) -->
+        <!-- href = destination -->
+        <!-- target="_blank" = opens in new tab -->
+        <a href="https://www.google.com/" target="_blank" title="Goes to google">
+            Click Me
+        </a>
+
+        <br>
+
+        <!-- Link to another HTML file -->
+        <a href="https://www.azlyrics.com/" target="_blank" title="Goes to song lyrics page">
+            Song Lyrics
+        </a>
+
+        <br>
+
+        <!-- mailto = opens user's email app -->
+        <a href="mailto:umer.azmi@fake.com">
+            Email Me
+        </a>
+        <hr>
+
+        <!-- ================= IMAGES ================= -->
+
+        <!-- img = used to display images -->
+        <!-- src = image URL -->
+        <!-- alt = text if image fails + accessibility -->
+        <h1>Here is a dog</h1>
+
+        <!-- Image wrapped inside a link -->
+        <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">
+            <img
+                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1"
+                alt="dog image">
+        </a>
+
+        <br>
+
+        <!-- GIF image works same as normal image -->
+        <img
+            src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+            alt="cat typing">
+
+        <!-- ================= AUDIO & VIDEO ================= -->
+
+        <!-- audio = used to play sound -->
+        <!-- controls = play/pause UI -->
+        <!-- autoplay = starts automatically -->
+        <!-- muted = required for autoplay -->
+        <!-- loop = repeats -->
+        <!-- preload = controls loading behavior -->
+        <h4>Sample Song</h4>
+
+        <audio controls autoplay muted loop preload="metadata">
+            <!-- source = audio file -->
+            <!-- browser picks supported format -->
+            <source
+                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                type="audio/mpeg">
+        </audio>
+
+        <!-- video works same as audio but with visuals -->
+        <!-- wrapped in link so clicking opens wiki -->
+        <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda" target="_blank">
+            <video controls autoplay muted loop>
+                <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4">
+            </video>
+        </a>
+    </main>
+
+        <!-- ================= SEMANTIC LAYOUT FOOTER ================= -->
+    <!-- footer = bottom section of the page -->
+    <!-- contains author info, copyright, contact -->
+    <footer class="page-footer" id="footer">
+        <hr>
+
+        <!-- &copy; = copyright symbol -->
+        Author: Umer Azmi <br>
+        
+        &copy; copyright reserved <br>
+        <small>
+            <a href="mailto:umer.azmi@fake.com">umer.azmi@fake.com</a>
+        </small>
+        <hr>
+    </footer>
+
+</body>
+</html>

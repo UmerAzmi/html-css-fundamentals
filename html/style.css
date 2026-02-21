@@ -1,0 +1,246 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: Inter, system-ui, sans-serif;
+    background-color: #000000;
+    color: #e5e7eb; /* light gray */
+    line-height: 1.6;
+    padding: 40px;
+}
+
+header,footer {
+    display: block;
+    background-color: #020617;
+    padding: 0;
+    margin: 0 -40px -40px -40px;
+}
+header{
+    margin: -40px -40px 0 -40px;
+    
+}
+nav{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+nav a{
+    text-decoration: underline;
+}
+
+main {
+    background-color: #0f172a; /* dark slate */
+    border: 1.7px solid #92979f;
+    margin: 0;
+}
+/* ================= HEADINGS ================= */
+h1, h3 {
+    margin-bottom: 12px;
+    color: #f8fafc;
+}
+
+h1 {
+    font-size: 2rem;
+}
+.first {
+    margin-top: 15px;
+}
+h3 {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ================= PARAGRAPHS ================= */
+p {
+    margin: 16px 0 8px;
+    font-size: 1rem;
+}
+
+/* ================= LINKS ================= */
+a {
+    color: #38bdf8; /* sky blue */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
+button {
+    margin: 12px auto;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #22c55e; /* green */
+    color: #022c22;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* ================= SEPARATOR ================= */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #92979f;
+    margin: 20px 0;
+}
+
+/* ================= IMAGES ================= */
+img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    margin: 12px auto;
+}
+
+/* ================= AUDIO & VIDEO ================= */
+audio,
+video {
+    display: block;
+    margin: 12px auto 24px;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+video {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= PRE TAG ================= */
+pre {
+    background-color: #020617;
+    padding: 16px 5em;
+    border-radius: 10px;
+    margin: 16px auto;
+    font-size: 0.95rem;
+    width: fit-content;
+    overflow-x: auto;
+}
+
+/* ================= SPAN vs DIV ================= */
+
+.span-box {
+    background-color: tomato;
+    padding: 2px 6px;
+}
+
+.div-box {
+    background-color: cyan;
+    padding: 10px;
+    color: #020617;
+    margin-top: 6px;
+}
+
+/* ================= LISTS ================= */
+
+.lists {
+    border: 2px solid #c2c3c3;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+ul,ol {
+    width: fit-content;     /* shrink to content */
+    /* margin: 12px auto;      center the list itself */
+    padding-left: 20px;     /* space for bullets */
+    text-align: left;       /* override global center */
+}
+
+/* List items */
+li {
+    margin: 6px 0;
+    text-align: left;       /* text stays beside bullet */
+}
+
+/* Description list */
+dl {
+    width: fit-content;
+    margin: 12px auto;
+    text-align: left;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+dd {
+    margin-left: 16px;
+    margin-bottom: 6px;
+}
+
+/* ================= TABLE ================= */
+
+.store-hours {
+    border-collapse: collapse;   /* removes double borders */
+    margin: 1px auto 20px;           /* center table */
+    background-color: #020617;   /* dark background */
+}
+
+.store-hours th,
+.store-hours td {
+    border: 1px solid #94a3b8;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+/* Header row */
+.store-hours th {
+    background-color: #bae6fd;   /* light blue */
+    color: #020617;
+}
+
+/* Data row */
+.store-hours td {
+    background-color: #e0f2fe;   /* lighter blue */
+    color: #020617;
+}
+
+.storeHours {
+    margin: 2px;
+}
+
+/* ================= JS BUTTON ================= */
+
+.js-btn {
+    font-size: 1.2rem;
+    background-color: rgb(24, 44, 100);
+    color: rgb(225, 225, 225);
+    border-radius: 10px;
+}
+.js-btn:hover {
+    background-color: rgb(154, 74, 20);
+    color: rgb(0, 0, 0);
+}
+#greeting {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ad0303;
+
+    background-color: #020617;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #c2c3c3;
+
+    padding: 10px;
+    width: fit-content;
+    margin: 12px auto 8px;
+}
