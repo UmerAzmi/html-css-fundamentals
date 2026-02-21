@@ -80,7 +80,7 @@ background-size = controls image scaling
 
 body {
     /* background image */
-    background-image: url("../Images/background.jpg");
+    background-image: url("./images/background.jpg");
 
     /* repeat behavior */
     /* repeat = tiles image (default) */

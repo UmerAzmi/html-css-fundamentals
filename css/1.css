@@ -35,17 +35,17 @@ body {
 /* src = path to font file */
 @font-face {
     font-family: Playwrite;
-    src: url(Fonts/PlaywriteINGuides-Regular.ttf);
+    src: url(fonts/PlaywriteINGuides-Regular.ttf);
 }
 
 @font-face {
     font-family: Roboto;
-    src: url(Fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 @font-face {
     font-family: Roboto-italic;
-    src: url(Fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf);
 }
 
 /* font-family = controls which font is used */
