@@ -6,8 +6,8 @@ A modern profile card component built using HTML and CSS, showcasing a clean lay
 
 🔗 Live Demo: https://UmerAzmi.github.io/html-css-fundamentals/projects/profile-card/
 
-<p align="center">
-  <img src="images/preview.png" alt="Profile Card UI" width="400">
+<p align="left">
+  <img src="img/preview.png" alt="Profile Card UI" width="400">
 </p>
 
 ## Features
