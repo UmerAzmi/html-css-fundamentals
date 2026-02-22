@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 93%);
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.profileCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 44%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background: linear-gradient(135deg, hsl(223, 10%, 10%), hsl(227, 17%, 19%));
+}
+
+.imgContainer {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: hsl(0, 100%, 45%);
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.imgContainer .profileImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.profileCard .textData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.textData .userName {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.textData .userJob {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profileCard .mediaBtns {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.mediaBtns .socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: #1f2023;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+}
+
+.mediaBtns .socialLink:hover{
+    transform: scale(1.25);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.481);
+}
+
+.profileCard .btnContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btnContainer .actionBtn {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #272a34;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnContainer .actionBtn:hover {
+    background-color: hsl(0, 100%, 43%);
+}
+
+.profileCard .analyticsBox {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.analyticsBox .analyticsData {
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7;
+}
+
+.analyticsData span {
+    font-size: 0.8em;
+    margin-right: 6px;
+}
+.analyticsData i {
+    font-size: 18px;
+}
+
+.analyticsData:last-child {
+    border-right: none;
+}
