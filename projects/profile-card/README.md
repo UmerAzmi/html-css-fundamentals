@@ -4,11 +4,13 @@ A modern profile card component built using HTML and CSS, showcasing a clean lay
 
 ## Preview
 
-🔗 Live Demo: https://UmerAzmi.github.io/html-css-fundamentals/projects/profile-card/
-
-<p align="left">
-  <img src="img/preview.png" alt="Profile Card UI" width="400">
-</p>
+<div>
+<a href="https://UmerAzmi.github.io/html-css-fundamentals/projects/profile-card/" target="_blank" style="">
+  <img src="https://img.shields.io/badge/View-Live%20Demo-blue?style=for-the-badge">
+</a>
+<br><br>
+<img src="img/preview.png" alt="Profile Card UI" width="500">
+</div>
 
 ## Features
 
