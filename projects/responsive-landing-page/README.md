@@ -5,7 +5,7 @@ A modern responsive landing page built using HTML, CSS, and JavaScript, featurin
 ## Preview
 
 <p>
-  <a href="https://UmerAzmi.github.io/html-css-fundamentals/projects/responsive-landing-page/" target="_blank">
+  <a href="https://umerazmi.github.io/html-css-fundamentals/projects/responsive-landing-page/" target="_blank">
     <img src="https://img.shields.io/badge/View-Live%20Demo-blue?style=for-the-badge" alt="Live Demo">
   </a>
 </p>
