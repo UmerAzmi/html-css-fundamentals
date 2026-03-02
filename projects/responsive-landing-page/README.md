@@ -4,7 +4,13 @@ A modern responsive landing page built using HTML, CSS, and JavaScript, featurin
 
 ## Preview
 
-![Landing Page Preview](img/preview.png)
+<div>
+<a href="https://UmerAzmi.github.io/html-css-fundamentals/projects/responsive-landing-page/" target="_blank" style="">
+  <img src="https://img.shields.io/badge/View-Live%20Demo-blue?style=for-the-badge">
+</a>
+<br><br>
+<img src="img/preview.png" alt="Profile Card UI" width="500">
+</div>
 
 ## Features
 
