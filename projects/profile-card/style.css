@@ -97,7 +97,7 @@ body {
 }
 
 .mediaBtns .socialLink:hover{
-    transform: scale(1.25) translateY(-4px);
+    transform: scale(1.25) translateY(-2px);
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.481);
 }
 
@@ -149,4 +149,5 @@ body {
 .analyticsData:last-child {
     border-right: none;
 }
+
 
